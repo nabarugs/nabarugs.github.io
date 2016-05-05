@@ -215,11 +215,10 @@ footer {
 	color: #FFF;
 }
 .dropdown-menu {
-	max-width: 10px;
+	min-width: 120px;
 	background-color: #000;
 	border: 0;
 	color: #FFF;
-	margin-top: -2px;
 }
 .dropdown-menu>li>a {
 	color:#FFF;
@@ -515,6 +514,186 @@ table {
 
 
 
+/* ------------------------------ Modal window -------------------------- */
+
+.modal {
+	overflow: auto;
+}
+
+.modal-open, .modal-open .navbar-fixed-top {
+	margin-right: auto !important;
+	overflow: hidden;
+}
+
+.text-modal h2{
+	margin-bottom: 20px;
+}
+.text-modal p{
+	text-align:justify;
+}
+.text-modal .close {
+	margin-top: 25px;
+	text-shadow: none;
+}
+.fade.modal {
+	overflow-x:hidden;
+}
+.modal.fade .modal-dialog {
+	-webkit-transform: translateY(2000px);
+	-moz-transform: translateY(2000px);
+	-ms-transform: translateY(2000px);
+	transform: translateY(2000px);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.5s;
+}
+.modal.in .modal-dialog {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+.modal-backdrop{
+	background-color:#1D2026;
+}
+.modal-backdrop.in{
+	opacity:1;
+	filter: alpha(opacity=100);
+}
+.modal-dialog{
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+}
+.modal-content{
+	width: 100%;
+	min-height: 100%;
+	border:none;
+	border-radius:0;
+	box-shadow:none;
+	background-color:#fff;
+}
+.modal-header{
+	width:100%;
+	margin:0;
+	padding:0;
+	background: #F3F3F3;
+	color:#fff;
+	border:none;
+	text-align:center;
+	height: 600px;
+}
+
+.modal-header .col-sm-12 {
+	padding: 0;
+}
+#hdr-title{
+	margin-bottom:20px;
+}
+#project-modal .close{
+	float:right;
+	font-size:21px;
+	line-height:21px;
+	font-weight:300;
+	margin-top: 23px;
+	/* margin-bottom:13px; */
+	margin-right: 32px;
+	opacity:1;
+	color:inherit;
+	text-shadow:none;
+	-webkit-transition:all 0.2s ease-out;
+	transition:all 0.2s ease-out;
+	position: absolute;
+	z-index: 4;
+	right: 0;
+}
+#project-modal .close:hover{
+	opacity: 1;
+	color: #23A657;
+}
+.modal-body {
+	margin:0;
+	padding:20px 0 80px 0;
+}
+.modal-body .project-descr{
+	margin:0 0 24px;
+}
+.modal-header .loader {
+	position:absolute;
+	left:50%;
+	top: 28%;
+	/* margin-top: 33%; */
+	margin-left: -8px;
+	width:35px;
+	height:35px;
+	background:url('../img/loader.gif') no-repeat 50% 50%;
+	z-index:1;
+}
+.modal-header .image-wrapper {
+	position:relative;
+	overflow:hidden;
+	height: auto;
+}
+.modal-header .screen{
+	box-sizing:padding-box;
+	border:none;
+	box-shadow:none;
+	margin:0;
+	padding:0;
+	position:absolute; 
+	top:0;
+	left: 0;
+	width:100%;
+	height:auto;
+	z-index:2;
+	opacity:0;
+	-webkit-transition:all 0.5s ease-out 0.7s;
+	transition:all 0.5s ease-out 0.7s;
+}
+.modal-header .screen.done {
+	opacity:1;
+}
+body.modal-open {
+	margin: 0;
+}
+#project-sidebar{
+	margin-bottom:20px;
+}
+
+#project-sidebar p{
+	margin-bottom:10px;
+
+}
+#project-content{
+	text-align:justify;
+}
+#project-content .btn-store{
+	margin-right: 0;
+}
+
+#sdbr-price {
+	font-weight: 600;
+	font-size: 23px;
+	width: auto;
+	/* float: left; */
+	display: inline;
+}
+
+#sdbr-oldprice {
+	text-decoration: line-through;
+	color: #999;
+	padding: 8px 0 0 8px;
+	/* float: left; */
+	display: inline;
+}
+#sdbr-title {
+	margin-top: 0;
+	color: #23A657;
+	/* font-weight: 600; */
+	margin-bottom: 0;
+
+}
 
 /* ------------------------------ Contact -------------------------- */
 .contact-info h2{
@@ -807,6 +986,12 @@ form p {
 	.hero-slider, .hero-sloder h2 {
 		text-align: center !important;
 	}
+	.modal-header .loader{
+		top:15%;
+	}
+	.modal-header {
+		height: 350px;
+	}
 	.welcome-content {
 		top: 43%;
 	}
@@ -831,148 +1016,11 @@ form p {
 		margin-top: 0;
 	}
  }
+ @media (min-width: 1200px) { 
+	.modal-header {
+		height: 650px;
+	}
 	
-}
-
-
-/**
- * Grid container
- */
-#tiles {
-	list-style-type: none;
-	position: relative; /** Needed to ensure items are laid out relative to this container **/
-	margin: 0;
-}
-
-/**
- * Grid items
- */
-#tiles li {
-	width: 220px;
-	background-color: #ffffff;
-	border: 1px solid #dedede;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	display: block; /** Hide items initially to avoid a flicker effect **/
-  	cursor: pointer;
-	padding: 4px;
-}
-
-#tiles li img {
-	display: block;
-}
-
-/**
- * Grid item text
- */
-#tiles li p {
-	color: #666;
-	font-size: 12px;
-	margin: 7px 0 0 7px;
-}
-
-/** General page styling **/
-
-.main {
-	padding: 10px 0 30px 0;
-	min-height: 180px;
-	margin-bottom: 3px;
-}
-
-a#inifiniteLoader{    
-    display:none;  
-} 
-
-.view {
-    width: 210px;
-    height: 100%;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-}
-.view .mask, .view .content {
-    width: 210px;
-    height:260px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0
-}
-.view img {
-    display: block;
-    position: relative
-}
-.view h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: #23A657;
-    margin: 10px 0 0 0
-}
-.view p {
-    font-size: 12px;
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center
-}
-
-.link-btn i{
-	border-radius: 30px;
-	background: #23A657;
-	font-size: 20px;
-	color: #e6e6e6;
-	padding: 11px 8px 8px;
-}
-
-.link-btn a:hover{
-	text-decoration: none;
-	font-color: #FFFFFF;
-}
-
-.view-first img { 
-    transition: all 0.2s linear;
-}
-.view-first .mask {
-    opacity: 0;
-    background-color: rgba(255,255,255, 0.7); 
-    transition: all 0.4s ease-in-out;
-}
-.view-first h2 {
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-}
-.view-first p { 
-    transform: translateY(100px);
-    opacity: 0;
-    transition: all 0.2s linear;
-}
-.view-first a.info{
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-}
-
-.view-first:hover img { 
-    transform: scale(1.1);
-} 
-.view-first:hover .mask { 
-    opacity: 1;
-}
-.view-first:hover h2,
-.view-first:hover p {
-    opacity: 1;
-    transform: translateY(0px);
-}
-.view-first:hover p {
-    transition-delay: 0.1s;
 }
 
 .frame {
@@ -991,3 +1039,4 @@ a{
 a:hover{
   color:#23894B; 	
 }
+
