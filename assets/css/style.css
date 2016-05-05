@@ -960,7 +960,7 @@ form p {
 	transition:all .3s ease-out;
 }
 .social-links li a i{
-	
+	margin-top: 14px;
 }
 .social-links li a:hover {
 	color:#FFF;
