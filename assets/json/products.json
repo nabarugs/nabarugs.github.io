@@ -1,0 +1,114 @@
+{
+    "products": {
+        "categories": [
+            {
+                "id": "1",
+                "name": "Handtufted",
+                "skus":[
+                  {
+                    "sku":"128",
+                    "name":"Handtufted1",
+                    "type":"",
+                    "size":"9 inch by 8 inch",
+                    "material":"leather",
+                    "weight":"22 kg",
+                    "finish":"",
+                    "patterns":"",
+                    "price":"USD 2300",
+                    "deliveryTime":"2 weeks",
+                    "extra":"",
+                    "image":"8.jpg",
+                    "thumbnail":""
+                  },
+                  {
+                    "sku":"128",
+                    "name":"hello",
+                    "type":"",
+                    "size":"",
+                    "material":"leather",
+                    "weight":"ji",
+                    "finish":"",
+                    "patterns":"",
+                    "price":"",
+                    "deliveryTime":"",
+                    "extra":"",
+                    "image":"",
+                    "thumbnail":""
+                  }
+                ] 
+            },
+            {
+                "id": "2",
+                "name": "Kids Carpets",
+                "skus":[
+                  {
+                    "sku":"128",
+                    "name":"hello",
+                    "type":"",
+                    "size":"",
+                    "material":"leather",
+                    "weight":"ji",
+                    "finish":"",
+                    "patterns":"",
+                    "price":"",
+                    "deliveryTime":"",
+                    "extra":"",
+                    "image":"",
+                    "thumbnail":""
+                  },
+                  {
+                    "sku":"128",
+                    "name":"hello",
+                    "type":"",
+                    "size":"",
+                    "material":"leather",
+                    "weight":"ji",
+                    "finish":"",
+                    "patterns":"",
+                    "price":"",
+                    "deliveryTime":"",
+                    "extra":"",
+                    "image":"",
+                    "thumbnail":""
+                  }
+                ] 
+            },
+            {
+                "id": "1",
+                "name": "Kids Carpets33",
+                "skus":[
+                  {
+                    "sku":"128",
+                    "name":"hello",
+                    "type":"",
+                    "size":"",
+                    "material":"leather",
+                    "weight":"ji",
+                    "finish":"",
+                    "patterns":"",
+                    "price":"",
+                    "deliveryTime":"",
+                    "extra":"",
+                    "image":"",
+                    "thumbnail":""
+                  },
+                  {
+                    "sku":"128",
+                    "name":"hello",
+                    "type":"",
+                    "size":"",
+                    "material":"leather",
+                    "weight":"ji",
+                    "finish":"",
+                    "patterns":"",
+                    "price":"",
+                    "deliveryTime":"",
+                    "extra":"",
+                    "image":"",
+                    "thumbnail":""
+                  }
+                ] 
+            }
+        ]
+    }
+}
