@@ -983,3 +983,11 @@ a#inifiniteLoader{
   height:260px;
   width:220px;
 }
+
+a{
+  color:#22A556; 	
+}
+
+a:hover{
+  color:#23894B; 	
+}
