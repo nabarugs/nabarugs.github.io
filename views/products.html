@@ -53,10 +53,71 @@
 			</div>
 		</div>
 
-		<section id="comingSoon" class="padding-top-bottom">
+<!-- 		<section id="comingSoon" class="padding-top-bottom">
 			<div class="row">
 				<div class="span1 text-center">
 					<img src="../assets/images/misc/coming-soon.jpg" />
+				</div>
+			</div>
+		</section> -->
+
+		<section id="products" class=" padding-top-bottom" ng-controller="ProductsController">
+			<div class="container">
+				<header class="section-header text-center wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
+					<h2>Collection</h2>
+				</header>
+			</div>
+			<div class="container">
+				<div id="projects-container" class="row" ng-repeat="category in categories">
+				    <header class="section-header text-left wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
+					<h3>{{category.name}}</h3>
+				</header>
+					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;">
+						<div class="img-box">
+							<div class="hover-mask2"></div>
+							<span class="product-icon icon-eye"></span>
+							<img class="img-responsive project-image" src="http://bragthemes.com/demo/pinstrap/files/2012/10/clown-220x255.jpeg" alt="">
+						</div>
+						<div class="product-info col-md-12">
+							<p class="project-price">$700</p>
+							<div>
+								<h4 class="project-title">Bed</h4>
+							</div>
+						</div>
+						<div class="sr-only project-description" data-oldprice="$800" data-images="img/01.jpg,img/02.jpg,img/03.jpg,img/04.jpg,img/05.jpg">
+							<p>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+						</div>
+					</article>
+					
+					
+				</div>
+			</div>
+
+			<div id="project-modal" class="modal " style="display: none;" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<a class="close" href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+							<div class="loader" style="display: block;"></div>
+							<div class="screen"></div>
+						</div>
+						<div class="modal-body">
+							<div class="container">
+								<div class="row">
+									<div id="project-sidebar" class="col-md-4 ">
+										<h2 id="sdbr-title">Flat UI-Kit</h2>	
+										<div>
+											<div id="sdbr-price">200</div>
+											<div id="sdbr-oldprice">500</div>
+										</div>
+									</div>
+									<div id="project-content" class="col-md-8 ">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
