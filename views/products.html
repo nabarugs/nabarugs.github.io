@@ -72,20 +72,20 @@
 				    <header class="section-header text-left wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
 					<h3>{{category.name}}</h3>
 				</header>
-					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;">
+					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon fa fa-eye"></span>
 							<img class="img-responsive project-image" src="http://bragthemes.com/demo/pinstrap/files/2012/10/clown-220x255.jpeg" alt="">
 						</div>
 						<div class="product-info col-md-12">
-							<p class="project-price">$700</p>
+							<p class="project-price">{{sku.price}}</p>
 							<div>
-								<h4 class="project-title">Bed</h4>
+								<h4 class="project-title">{{sku.name}}</h4>
 							</div>
 						</div>
 						<div class="sr-only project-description" data-oldprice="$800" data-images="img/01.jpg,img/02.jpg,img/03.jpg,img/04.jpg,img/05.jpg">
-							<p>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+							<p>hiii</p>
 						</div>
 					</article>
 					
