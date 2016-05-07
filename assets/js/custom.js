@@ -82,13 +82,15 @@ $(document).ready(function() {
 		$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
 	});
 
-	// $('#project-modal').on( 'click', '#btn-order',function () {
-	// 	$('#project-modal').modal('hide');
-	// 	$(this).find('.loader').show();
-	// 	$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
-	// 	var aTag = $("section[id='orderform']");
-	// 	$('html,body').animate({scrollTop: aTag.offset().top},'slow');
-	// });
+	$('#project-modal').on( 'click', '#btn-order',function () {
+		// $('#project-modal').modal('hide');
+		// $(this).find('.loader').show();
+		// $(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
+		// var aTag = $("section[id='orderform']");
+		// $('html,body').animate({scrollTop: aTag.offset().top},'slow
+
+		$('#contactInfo').show();
+			});
 });
 
 
