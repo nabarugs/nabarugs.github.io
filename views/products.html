@@ -71,7 +71,7 @@
 				    <header class="section-header text-left wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
 					<h3>{{category.name}}</h3>
 				</header>
-					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus">
+					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus" on-finish-render="associateProductsClickAction()">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon fa fa-eye"></span>
@@ -113,7 +113,7 @@
 										</div>
 									</div>
 									<div id="project-content" class="col-md-8 ">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+										<p>product description</p>
 									</div>
 								</div>
 							</div>
