@@ -72,13 +72,12 @@
 					<h3>{{category.name}}</h3>
 				</header>
 					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus">
-						<div class="img-box" ng-init="$last ? associateProductsClickAction() : null">
+						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon fa fa-eye"></span>
 							<img class="img-responsive project-image" src="../assets/images/hero/hero_1.jpg" alt="">
 						</div>
 						<div class="product-info col-md-12">
-							<p class="project-price">{{sku.price}}</p>
 							<div>
 								<h4 class="project-title">{{sku.name}}</h4>
 							</div>
@@ -96,7 +95,7 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<a class="close" href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+							<a class="close" href="#" data-dismiss="modal"><i class="fa fa-close"></i></a>
 							<div class="loader" style="display: block;"></div>
 							<div class="screen"></div>
 						</div>
