@@ -67,11 +67,11 @@
 				</header>
 			</div>
 			<div class="container">
-				<div id="projects-container" class="row" ng-repeat="category in categories">
+				<div id="projects-container" class="row" ng-repeat="category in categories" on-finish-render="associateProductsClickAction()">
 				    <header class="section-header text-left wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
 					<h3>{{category.name}}</h3>
 				</header>
-					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus" on-finish-render="associateProductsClickAction()">
+					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus">
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon fa fa-eye"></span>
