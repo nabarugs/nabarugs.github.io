@@ -84,10 +84,15 @@
 							</div>
 						</div>
 						<div class="sr-only project-description" data-oldprice="$800" data-images="img/01.jpg,img/02.jpg,img/03.jpg,img/04.jpg,img/05.jpg">
-							<p>Product description is this</p>
-							<p>Product description is this</p>
-							<p>Product description is this</p>
-							<p>Product description is this</p>
+                			<p>{{sku.extra}}</p>
+                			<h3>Details</h3>
+                			<ul>
+                    			<li>Style: {{sku.sku}}</li>
+                    			<li>Material: {{sku.material}</li>
+                   	 			<li>Size: {{sku.size}}</li>
+                    			<li>Weight: {{sku.weight}}</li>
+                    			<li>Availability: {{sku.deliveryTime}</li>
+                			</ul>
 						</div>
 					</article>
 					
