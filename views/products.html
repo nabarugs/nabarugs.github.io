@@ -72,7 +72,7 @@
 					<h3>{{category.name}}</h3>
 				</header>
 					<article class="design product col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; -webkit-animation: fadeInUp 0.2s;" ng-repeat="sku in category.skus">
-						<div class="img-box">
+						<div class="img-box" ng-init="$last ? associateProductsClickAction() : null">
 							<div class="hover-mask2"></div>
 							<span class="product-icon fa fa-eye"></span>
 							<img class="img-responsive project-image" src="../assets/images/hero/hero_1.jpg" alt="">
