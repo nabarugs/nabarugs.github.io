@@ -105,7 +105,7 @@ function associateProductsClickAction(){
 		for (var i = 0; i < slides.length; ++i) {
 			slidesHtml = slidesHtml + '<img src=' + slides[i] + ' alt="">';
 		}
-		slidesHtml = slidesHtml + '</div><nav class="slides-navigation"><a href="#" class="next"><i class="icon-arrow-right"></i></a><a href="#" class="prev"><i class="icon-arrow-left"></i></a></nav>';
+		slidesHtml = slidesHtml + '</div><nav class="slides-navigation"><a href="#" class="next"><i class="fa fa-angle-right"></i></a><a href="#" class="prev"><i class="fa fa-angle-left"></i></a></nav>';
 		$('#project-modal').on('show.bs.modal', function() {
 			$(this).find('#sdbr-title').text(title);
 			$(this).find('#sdbr-price').text(price);
