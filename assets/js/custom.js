@@ -89,23 +89,6 @@ $(document).ready(function() {
 		var aTag = $("section[id='orderform']");
 		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
 	});
-
-	/* style switch	==============================================*/
-	$('#style-switcher h2 a').click(function(){
-		$('#style-switcher').toggleClass('open');
-		return false;
-	});
-
-	$('#style-switcher li').click(function(e){
-		e.preventDefault();
-		var m = $(this);
-		$('.colors').attr('href', 'css/' + m.attr('id') + '.css');
-		$('#logo').attr('src', 'img/logo-' + m.attr('id') + '.png');
-		$('#navlogo').attr('src', 'img/navlogo-' + m.attr('id') + '.png');
-		$('#style-switcher').removeClass('open');
-		return false; 
-	});	
-
 });
 
 
