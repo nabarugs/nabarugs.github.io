@@ -5,6 +5,10 @@ angular.module('NabaRugsApp', [])
        .then(function(res){
           $scope.categories = res.data.products.categories;             
         });
+
+       $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+    	  associateProductsClickAction();
+		});
   })
   .directive('onFinishRender', function ($timeout) {
     return {

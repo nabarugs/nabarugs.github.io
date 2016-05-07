@@ -67,7 +67,7 @@
 				</header>
 			</div>
 			<div class="container">
-				<div id="projects-container" class="row" ng-repeat="category in categories" on-finish-render="associateProductsClickAction()">
+				<div id="projects-container" class="row" ng-repeat="category in categories" on-finish-render="ngRepeatFinished">
 				    <header class="section-header text-left wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;">
 					<h3>{{category.name}}</h3>
 				</header>
