@@ -5,7 +5,7 @@ angular.module('NabaRugsApp', [])
        .then(function(res){
           $scope.categories = res.data.products.categories;
           
-          console.log($scope.categories);              
+          associateProductsClickAction();             
         });
     
   });

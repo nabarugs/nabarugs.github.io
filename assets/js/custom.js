@@ -75,7 +75,41 @@ $(document).ready(function() {
 	});
 		
 	/* Project Preview	==============================================*/
-	$('.img-box').click(function(e) {
+	 associateProductsClickAction();
+
+	$('#project-modal').on('hidden.bs.modal', function() {
+		$(this).find('.loader').show();
+		$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
+	});
+
+	$('#project-modal').on( 'click', '#btn-order',function () {
+		$('#project-modal').modal('hide');
+		$(this).find('.loader').show();
+		$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
+		var aTag = $("section[id='orderform']");
+		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
+	});
+
+	/* style switch	==============================================*/
+	$('#style-switcher h2 a').click(function(){
+		$('#style-switcher').toggleClass('open');
+		return false;
+	});
+
+	$('#style-switcher li').click(function(e){
+		e.preventDefault();
+		var m = $(this);
+		$('.colors').attr('href', 'css/' + m.attr('id') + '.css');
+		$('#logo').attr('src', 'img/logo-' + m.attr('id') + '.png');
+		$('#navlogo').attr('src', 'img/navlogo-' + m.attr('id') + '.png');
+		$('#style-switcher').removeClass('open');
+		return false; 
+	});	
+
+});
+
+function associateProductsClickAction(){
+  $('.img-box').click(function(e) {
 		e.preventDefault();
 		var elem = $(this).parent(),
 			title = elem.find('.project-title').text(),
@@ -111,34 +145,4 @@ $(document).ready(function() {
 			}, 1000);
 		}).modal();
 	});
-
-	$('#project-modal').on('hidden.bs.modal', function() {
-		$(this).find('.loader').show();
-		$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
-	});
-
-	$('#project-modal').on( 'click', '#btn-order',function () {
-		$('#project-modal').modal('hide');
-		$(this).find('.loader').show();
-		$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
-		var aTag = $("section[id='orderform']");
-		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
-	});
-
-	/* style switch	==============================================*/
-	$('#style-switcher h2 a').click(function(){
-		$('#style-switcher').toggleClass('open');
-		return false;
-	});
-
-	$('#style-switcher li').click(function(e){
-		e.preventDefault();
-		var m = $(this);
-		$('.colors').attr('href', 'css/' + m.attr('id') + '.css');
-		$('#logo').attr('src', 'img/logo-' + m.attr('id') + '.png');
-		$('#navlogo').attr('src', 'img/navlogo-' + m.attr('id') + '.png');
-		$('#style-switcher').removeClass('open');
-		return false; 
-	});	
-
-});
+}
