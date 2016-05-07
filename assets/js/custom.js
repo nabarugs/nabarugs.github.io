@@ -108,8 +108,9 @@ $(document).ready(function() {
 
 });
 
+
 function associateProductsClickAction(){
-  $('.img-box').click(function(e) {
+	$('.img-box').click(function(e) {
 		e.preventDefault();
 		var elem = $(this).parent(),
 			title = elem.find('.project-title').text(),
