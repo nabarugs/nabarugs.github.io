@@ -130,5 +130,7 @@ function associateProductsClickAction(){
 				$('#project-modal .screen').addClass('done').prev('.loader').fadeOut();
 			}, 1000);
 		}).modal();
+	
+	  $('#contactInfo').hide();
 	});
 }
