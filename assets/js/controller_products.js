@@ -3,7 +3,7 @@ angular.module('NabaRugsApp', [])
 
       $http.get('../assets/json/products.json')
        .then(function(res){
-          jsonObject = fromJson(res.data);
+          jsonObject = angular.fromJson(res.data);
           $scope.categories = jsonObject.products.categories;             
         });
 
