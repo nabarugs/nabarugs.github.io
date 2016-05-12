@@ -5,7 +5,7 @@ angular.module('NabaRugsApp', [])
        .then(function(res){
           jsonObject = angular.fromJson(res.data);
           $scope.categories = jsonObject.products.categories;
-          var catId = $location.search();
+          var catId = $location.hash();
           console.log(catId);            
         });
 
