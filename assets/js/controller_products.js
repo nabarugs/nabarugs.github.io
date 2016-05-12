@@ -15,7 +15,12 @@ angular.module('NabaRugsApp', [])
 
        $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
     	  associateProductsClickAction();
-		});
+		  
+      $scope.reloadPage = function(){
+        location.reload();
+      };
+
+    });
   })
   .directive('onFinishRender', function ($timeout) {
     return {
