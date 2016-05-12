@@ -1,12 +1,12 @@
 angular.module('NabaRugsApp', [])
-  .controller('ProductsController', function ($scope, $http, $location) {
+  .controller('ProductsController', function ($scope, $http, $location, $filter) {
 
       $http.get('../assets/json/products.json')
        .then(function(res){
           jsonObject = angular.fromJson(res.data);
+          var cid = parseInt($location.search()['cid']);
           $scope.categories = jsonObject.products.categories;
-          var catId = $location.search()['cid'];
-          console.log(catId);            
+          $scope.visibleCat = $filter('filter')($scope.categories,id:cid)[0];            
         });
 
        $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
