@@ -5,10 +5,12 @@ angular.module('NabaRugsApp', [])
        .then(function(res){
           jsonObject = angular.fromJson(res.data);
           var cid = parseInt($location.search()['cid']);
-          console.log(cid);
-          $scope.categories = jsonObject.products.categories;
-          $scope.visibleCat = [$filter('filter')($scope.categories,{id:cid})[0]];
-          console.log($scope.visibleCat);            
+          $scope.allCat = jsonObject.products.categories;
+
+          if(cid==1000)
+            $scope.visibleCat = $scope.allCat;
+          else
+            $scope.visibleCat = [$filter('filter')($scope.allCat,{id:cid})[0]];            
         });
 
        $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {

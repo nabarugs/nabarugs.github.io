@@ -38,8 +38,8 @@
 						<li>
 						<li data-toggle="dropdown"><a href="#">Products</a></li>
 						  <ul class="dropdown-menu" style="left:440px">
-							<li><a href="">All</a></li>
-							<li ng-repeat="category in categories"><a href="#{{category.id}}">{{category.name}}</a></li>
+							<li><a href="products.html#?cid=1000">All</a></li>
+							<li ng-repeat="category in allCat"><a href="products.html#?cid={{category.id}}">{{category.name}}</a></li>
 						  </ul>
 						</li>
 						<li><a class="external" href="home.html#testimonial">Testimonials</a></li>
