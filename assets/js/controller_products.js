@@ -7,7 +7,7 @@ angular.module('NabaRugsApp', [])
           var cid = parseInt($location.search()['cid']);
           $scope.allCat = jsonObject.products.categories;
 
-          if(cid==1000)
+          if(cid==1000 || cid==undefined)
             $scope.visibleCat = $scope.allCat;
           else
             $scope.visibleCat = [$filter('filter')($scope.allCat,{id:cid})[0]];            
