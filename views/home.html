@@ -21,7 +21,7 @@
 		<![endif]-->
 	</head>
 
-	<body id="home">
+	<body id="home" ng-app="NabaRugsApp" ng-controller="ProductsController">
 		<div id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -36,18 +36,14 @@
 				<div class="collapse navbar-collapse">
 					<ul id="navigation" class="nav navbar-nav navbar-right text-center">
 					<li><a href="#about">About</a></li>
-					<li><a class="external" href="products.html#?cid=1000">Products</a></li>
-<!-- 						<li>
-				<li data-toggle="dropdown"><a class="external" href="products.html">Products</a></li>
-							<ul class="dropdown-menu" style="left:440px">
-							<li><a href="#">carpets</a></li>
-							<li><a href="#">Rugs</a></li>
-							<li><a href="#">France</a></li>
-							<li><a href="#">Slovak</a></li>
+					<li data-toggle="dropdown"><a href="#">Products</a></li>
+						  <ul class="dropdown-menu" ng-click="reloadPage()">
+							<li><a class="external" href="products.html#?cid=1000">All</a></li>
+							<li ng-repeat="category in allCat"><a class="external" href="products.html#?cid={{category.id}}">{{category.name}}</a></li>
 						  </ul>
-						</li> -->
-						<li><a href="#testimonial">Testimonials</a></li>
-						<li><a href="#contact">Contact</a></li>
+					</li>
+					<li><a href="#testimonial">Testimonials</a></li>
+					<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
 
@@ -270,11 +266,13 @@
 		</div>
 		
 		<script type="text/javascript" src="../assets/js/vendor/jquery.min.js"></script>
+		<script type="text/javascript" src="../assets/js/vendor/angular.min.js"></script>
 		<script type="text/javascript" src="../assets/js/vendor/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../assets/js/vendor/jquery.singlePageNav.min.js"></script>
 		<script type="text/javascript" src="../assets/js/vendor/jquery.superslides.min.js"></script>
 		<script type="text/javascript" src="../assets/js/vendor/jquery.countdown.min.js"></script>
 		<script type="text/javascript" src="../assets/js/vendor/wow.min.js"></script>
 		<script type="text/javascript" src="../assets/js/custom.js"></script>
+		<script type="text/javascript" src="../assets/js/controller_products.js"></script>
 	</body>
 </html>
