@@ -74,7 +74,7 @@
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon fa fa-eye"></span>
-							<img class="img-responsive project-image" src="../assets/images/hero/hero_1.jpg" alt="">
+							<img class="img-responsive project-image" src="../assets/images/products/cid{{category.id}}/{{sku.images}}" alt="">
 						</div>
 						<div class="product-info col-md-12">
 							<p class="project-price" style="display:none">{{sku.price}}</p>
@@ -86,11 +86,11 @@
                 			<p>{{sku.extra}}</p>
                 			<h3>Details</h3>
                 			<ul>
-                    			<li>Style: {{sku.sku}}</li>
-                    			<li>Material: {{sku.material}}</li>
-                   	 			<li>Size: {{sku.size}}</li>
-                    			<li>Weight: {{sku.weight}}</li>
-                    			<li>Availability: {{sku.deliveryTime}}</li>
+                    			<li ng-show="{{sku.sku}}">Style: {{sku.sku}}</li>
+                    			<li ng-show="{{sku.material}}">Material: {{sku.material}}</li>
+                   	 			<li ng-show="{{sku.size}}">Size: {{sku.size}}</li>
+                    			<li ng-show="{{sku.weight}}">Weight: {{sku.weight}}</li>
+                    			<li ng-show="{{sku.deliveryTime}}">Availability: {{sku.deliveryTime}}</li>
                 			</ul>
 						</div>
 					</article>
