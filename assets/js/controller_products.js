@@ -20,14 +20,14 @@ angular.module('NabaRugsApp', [])
         location.reload();
       };
 
-      $scope.createImagesString = function(cid, images){
-        imgs="";
-        imagesArray = images.split(',');
-        angular.forEach(imagesArray, function(value, key){
-          imgs += "../assets/images/products/cid"+cid+"/"+value+",";
-        });
-        retrun imgs;
-      };
+//      $scope.createImagesString = function(cid, images){
+ //       imgs="";
+ //       imagesArray = images.split(',');
+ //       angular.forEach(imagesArray, function(value, key){
+ //         imgs += "../assets/images/products/cid"+cid+"/"+value+",";
+//        });
+ //       retrun imgs;
+ //     };
 
     });
   })
