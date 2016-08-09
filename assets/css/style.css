@@ -586,6 +586,7 @@ table {
 	border:none;
 	text-align:center;
 	height: 600px;
+	max-height: 600px;
 }
 
 .modal-header .col-sm-12 {
