@@ -103,11 +103,9 @@
 					    <br />
 
 					  <div ng-repeat="category in allCat" class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.2s" data-wow-offset="10">
-					  <div class="img-box">
-					  <img class="img-responsive project-image" src="../assets/images/products/cid{{category.id}}/thumbnail/{{category.skus[0].thumb_image}}" alt="" />
 					  <a class="external" href="products.html#?cid={{category.id}}">
-					  {{category.name}}</a>
-					  </div>
+					  <img class="img-responsive project-image" src="../assets/images/products/cid{{category.id}}/thumbnail/{{category.skus[0].thumb_image}}" alt="" /><b>
+					  {{category.name}}</b></a>
 					  </div>
 					</div>
 
